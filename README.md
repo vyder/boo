@@ -1,12 +1,10 @@
-# Ghost Starter Theme
+# boo
 
-A starter framework for Ghost themes! Fork this repository and start your development here with all the main things you need to develop a custom Ghost theme.
+A fork of the [ghost/starter](https://github.com/TryGhost/Starter) theme. Customized to migrate vidur.io from [Kirby](https://getkirby.com) to [Ghost](https://ghost.org).
 
 &nbsp;
 
-# First time using a Ghost theme?
-
-Ghost uses a simple templating language called [Handlebars](http://handlebarsjs.com/) for its themes.
+# Getting Started
 
 We've documented our default theme pretty heavily so that it should be fairly easy to work out what's going on just by reading the code and the comments. Once you feel comfortable with how everything works, we also have full [theme API documentation](https://themes.ghost.org) which explains every possible Handlebars helper and template.
 
@@ -55,7 +53,3 @@ yarn zip
 - [Color Mod](https://github.com/jonathantneal/postcss-color-mod-function)
 
 &nbsp;
-
-# Copyright & License
-
-Copyright (c) 2013-2020 Ghost Foundation - Released under the [MIT license](LICENSE).
