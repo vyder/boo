@@ -1,0 +1,386 @@
+/*
+
+Kirby Starterkit
+
+Author: Bastian Allgeier / Sascha Lack
+URL:    http://getkirby.com
+Email:  support@getkirby.com
+
+*/
+
+
+/* Source Sans Pro
+-------------------------------------------------- */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/sourcesanspro-300.woff) format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/sourcesanspro-400.woff) format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: url(../fonts/sourcesanspro-600.woff) format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 400;
+  src: url(../fonts/sourcesanspro-400-italic.woff) format('woff');
+}
+
+
+/* Reset
+-------------------------------------------------- */
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+
+/* Pix
+-------------------------------------------------- */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* Links
+-------------------------------------------------- */
+a {
+  color: #000;
+  text-decoration: none;
+  transition: color .3s, background .3s, border .3s;
+}
+a:hover {
+  color: #000;
+}
+
+
+/* Clearfix
+-------------------------------------------------- */
+.cf:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Site
+-------------------------------------------------- */
+html {
+  height: 101%;
+  font-family: "Source Sans Pro", sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  font-size: 1.25em;
+  line-height: 1.5em;
+  padding: 3em;
+  background: #fff;
+  color: #222;
+  position: relative;
+  min-height: 100%;
+}
+#content {
+  float: left;
+  margin-left: 2em;
+  max-width: 25em;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    padding: 1.5em;
+    min-width: 300px;
+  }
+  #content {
+    margin-left: 0;
+    clear: both;
+  }
+}
+
+/* Sidebar / Topbar
+-------------------------------------------------- */
+#sidebar {
+  float: left;
+  margin-left: 5em;
+}
+#sidebar > a {
+  margin-left: 0px;
+}
+.logo {
+  display: block;
+  margin-bottom: 1em;
+}
+svg#logo {
+  fill: #00B4FF;
+  margin-bottom: 46px;
+}
+svg#logo + div {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 2em;
+  line-height: 1em;
+}
+.navigation {
+  margin-left: 20px;
+}
+.menu a {
+  border-bottom: 2px solid #ddd;
+}
+.menu a:hover {
+  text-decoration: none;
+  border-bottom: 2px solid #00B4FF;
+}
+.menu .active {
+  color: #00B4FF;
+  border-bottom: 2px solid #ddd;
+}
+.menu li {
+  list-style: none;
+  text-transform: lowercase;
+}
+.topbar-divider {
+  display: none;
+}
+@media screen and (max-width: 900px) {
+  #sidebar {
+    float: none;
+    margin-left: 0px;
+  }
+  .logo-block {
+    margin-left: 0px;
+    float:left;
+  }
+  .navigation {
+    float: left;
+    margin-left: 2em;
+  }
+  .topbar-divider {
+    margin-top: 0 !important;
+    margin-bottom: 1em !important;
+    display: block;
+    height: 2px;
+    background: #ddd;
+  }
+}
+
+/* Homepage-specific
+-------------------------------------------------- */
+.homepage {
+}
+
+/* Headings
+-------------------------------------------------- */
+h1 {
+  font-size: 2em;
+  line-height: 1.25em;
+  font-weight: 400;
+  margin-bottom: .5em;
+}
+h2 {
+  font-size: 2em;
+  line-height: 1.25em;
+  font-weight: 300;
+  margin-bottom: .5em;
+  color: #00B4FF;
+}
+h3 {
+  font-size: 1.4em;
+  line-height: 1.5em;
+  font-weight: 400;
+  margin-bottom: .5em;
+}
+h4 {
+  font-size: 1.125em;
+  font-weight: 600;
+  line-height: 1.5em;
+  margin-bottom: .5em;
+  color: #00B4FF;
+}
+h1 a, h2 a, h3 a, h4 a {
+  color: inherit;
+  border: 0 !important;
+}
+
+
+
+/* Main
+-------------------------------------------------- */
+.main {
+  padding-bottom: 1.5em;
+  border-bottom: 2px solid #00B4FF;
+}
+.main hr {
+  margin: 2em 0;
+  height: 2px;
+  background: #ddd;
+}
+.main p,
+.main figure,
+.main ul,
+.main ol {
+  margin-bottom: 1.5em;
+}
+.main a {
+  border-bottom: 2px solid #ddd;
+}
+.main a:hover {
+  border-color: #00B4FF;
+}
+
+/* Post meta
+-------------------------------------------------- */
+.meta {
+  margin-bottom: 1.5em;
+}
+.meta li {
+  float: left;
+  list-style: none;
+  margin-right: 2em;
+  color: #000;
+}
+.meta li b {
+  font-weight: 400;
+  color: #000;
+  padding-right: .25em;
+}
+
+
+/* Post artifacts
+-------------------------------------------------- */
+.text ul,
+.text ol {
+  margin-left: 1em;
+}
+
+.text sup {
+  font-size: 0.6em;
+  margin-left: 3px;
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+.text sup a {
+  color: #888;
+  border: none;
+}
+.text sup a:hover {
+  color: #00B4FF;
+}
+
+/* Footnotes */
+.footnotes {
+  font-size: 0.8em;
+}
+.footnotes hr {
+  margin-bottom: 1em;
+}
+.footnotes ol {
+  margin-left: 2em;
+}
+.footnotes p {
+  margin-bottom: 0.5em;
+}
+
+/* Image captions */
+.caption {
+  font-size: 0.7em;
+  display: block;
+  text-align: center;
+}
+.caption a {
+  border-bottom: 1px solid #DDD;
+}
+.caption a:hover {
+  border-color: #00B4FF;
+}
+
+/* Block quotes */
+blockquote {
+  border-left: 6px solid #DDD;
+  margin-left: 12px;
+  padding-left: 15px;
+  font-style: italic;
+  color: #555;
+}
+
+/* Latest Posts Divider */
+hr.latest-posts {
+  margin: 1em 0;
+}
+
+
+/* Post teaser
+-------------------------------------------------- */
+.teaser {
+  list-style: none;
+}
+.teaser .article {
+  list-style: none;
+  margin-bottom: 1.5em;
+}
+.teaser .article h3 {
+  margin-bottom: 0px;
+}
+.teaser .article h3 small {
+  display: block;
+  margin-top: -5px;
+  font-size: 0.6em;
+  font-weight: 500;
+}
+.teaser .article p:last-of-type {
+  margin-bottom: 0.2em;
+}
+.teaser .article .read-more {
+  font-size: 0.9em;
+}
+
+/* Next/Prev nav
+-------------------------------------------------- */
+.nextprev {
+  padding: 1em 0;
+}
+.nextprev a {
+  border: 0;
+}
+.nextprev .prev {
+  float: left;
+}
+.nextprev .next {
+  float: right;
+}
+
+
+/* Footer
+-------------------------------------------------- */
+.footer {
+  padding: 1em 0 6em;
+  font-size: .8em;
+}
+.copyright {
+  float: left;
+}
+.colophon {
+  float: right;
+}
+.colophon a b {
+  padding-left: .25em;
+}
