@@ -1,0 +1,7 @@
+<div class="navigation">
+  <ul class="menu cf">
+    {{#foreach navigation}}
+        <li><a {{#if current}}class="active" {{/if}}href="{{url absolute="true"}}">{{label}}</a></li>
+    {{/foreach}}
+  </ul>
+</div>
