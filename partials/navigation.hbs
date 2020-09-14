@@ -5,3 +5,21 @@
     {{/foreach}}
   </ul>
 </div>
+
+{{#contentFor "script"}}
+<script type="text/javascript">
+    $(document).ready(function() {
+        // If there are no active nav links
+        if($("ul.menu > li > a.active").length === 0) {
+
+            // Try to make one
+            $("ul.menu > li > a").each(function(i, link) {
+                const path = $(link).attr('href').replace(window.location.origin, '');
+                if(window.location.pathname.match(path)) {
+                    $(link).addClass("active");
+                }
+            });
+        }
+    });
+</script>
+{{/contentFor}}

@@ -7,39 +7,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {{!-- <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" /> --}}
 
-  <title>{{meta_title}}</title>
+  <title>{{@site.title}}{{#if meta_title}} | {{meta_title}}{{/if}}</title>
   <meta name="description" content="{{description}}">
   <meta name="keywords" content="{{keywords}}">
 
   {{ghost_head}}
 
-  <!-- Facebook App ID -->
-  <meta property="fb:app_id" content="561872837296941">
-
-  <!-- Twitter Large Image Summary Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@Vyder">
-  <meta name="twitter:creator" content="@Vyder">
-  <meta name="twitter:title" content="{{meta_title}}">
-  <meta name="twitter:description" content="{{description}}">
-  <meta name="twitter:image" content="">
-
   <link rel="icon" type="image/x-icon" href="{{asset "images/favicon.ico"}}"/>
   <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}"/>
 </head>
-<body class="{{body_class}}">
+<body{{#if body_class}} class="{{body_class}}"{{/if}}>
 <div class="gh-viewport">
   {{!-- <header></header> --}}
   {{> "sidebar"}}
 
   <div id="content">
       <main class="main" role="main">
-          <hr class="topbar-divider">
-          <div class="text">
-            {{#post}}
-              {{content}}
-            {{/post}}
-          </div>
+        {{{body}}}
       </main>
   </div>
   <div class="cf"></div>
@@ -47,7 +31,7 @@
   {{!-- <footer></footer> --}}
 </div> <!-- /viewport -->
 
-<script src="{{asset "built/jquery-3.4.1.min.js"}}"></script>
+<script type="text/javascript" src="{{asset "built/jquery-3.4.1.min.js"}}"></script>
 <script type="text/javascript">
   var images = document.querySelectorAll('.kg-gallery-image img');
   images.forEach(function (image) {
@@ -57,11 +41,9 @@
       var ratio = width / height;
       container.style.flex = ratio + ' 1 0%';
   });
-  $(document).ready(function () {
-      var $postContent = $(".gh-content");
-      $postContent.fitVids();
-  });
 </script>
+
+{{{block "script"}}}
 
 {{ghost_foot}}
 

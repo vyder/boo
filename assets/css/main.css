@@ -239,11 +239,18 @@ h1 a, h2 a, h3 a, h4 a {
 .main ol {
   margin-bottom: 1.5em;
 }
+.main p.breaks {
+  white-space: pre-line;
+}
 .main a {
   border-bottom: 2px solid #ddd;
 }
 .main a:hover {
   border-color: #00B4FF;
+}
+
+.main time.index {
+  text-transform: uppercase;
 }
 
 /* Post meta
@@ -287,29 +294,32 @@ h1 a, h2 a, h3 a, h4 a {
 }
 
 /* Footnotes */
-.footnotes {
+ol:last-of-type {
   font-size: 0.8em;
 }
-.footnotes hr {
+.main hr:last-of-type {
   margin-bottom: 1em;
 }
-.footnotes ol {
+ol:last-of-type {
   margin-left: 2em;
 }
-.footnotes p {
+ol:last-of-type li {
+  margin-bottom: 0.5em;
+}
+ol:last-of-type p {
   margin-bottom: 0.5em;
 }
 
 /* Image captions */
-.caption {
+figcaption, .caption {
   font-size: 0.7em;
   display: block;
   text-align: center;
 }
-.caption a {
+figcaption a, .caption a {
   border-bottom: 1px solid #DDD;
 }
-.caption a:hover {
+figcaption a:hover, .caption a:hover {
   border-color: #00B4FF;
 }
 
